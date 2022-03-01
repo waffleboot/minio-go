@@ -1,4 +1,4 @@
-module github.com/minio/minio-go/v7
+module github.com/waffleboot/minio-go/v7
 
 go 1.17
 
