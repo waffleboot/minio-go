@@ -309,6 +309,8 @@ func (c *Client) putObjectMultipartStreamNoLength(ctx context.Context, bucketNam
 		}
 	}()
 
+	fmt.Println("!!! ", partSize)
+
 	// Part number always starts with '1'.
 	partNumber := 1
 
@@ -317,6 +319,8 @@ func (c *Client) putObjectMultipartStreamNoLength(ctx context.Context, bucketNam
 
 	// Create a buffer.
 	buf := make([]byte, partSize)
+
+	fmt.Println("??? ", partSize)
 
 	for partNumber <= totalPartsCount {
 		length, rerr := readFull(reader, buf)
